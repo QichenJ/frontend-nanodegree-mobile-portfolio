@@ -32,10 +32,24 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
+
+#### Optimization steps I have done for Part1
+1. Add media="print" for print.css to unblocking this css file.
+2. Seperate the media euqry from style.css and make it one unblocking seperate file.
+3. Inline style.css file.
+4. Change Third party font to Self hosted fonts to optimize Css delievry.
+5. Make analytics.js file Async to unblock rendering.
+
+#### Optimization steps I have done for Part2
+1. Rewrite the changePizzaSizes function, moving DOM query out of for loop.
+2. To avoid Forced Synchronous Layout, moving scrollTop out of loopand batching style changing.
+3. Change document.querySelector() to document.getElementById() which is faster.
+4. document.querySelectorAll() to document.getElementsByClassName().
+5. Declare some variables out of for loop.
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
