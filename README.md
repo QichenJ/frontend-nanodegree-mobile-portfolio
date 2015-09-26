@@ -50,6 +50,7 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 3. Change document.querySelector() to document.getElementById() which is faster.
 4. document.querySelectorAll() to document.getElementsByClassName().
 5. Declare some variables out of for loop.
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
